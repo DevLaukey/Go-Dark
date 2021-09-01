@@ -1,0 +1,3 @@
+const SET_SETTINGS = 'SET_SETTINGS';
+
+export { SET_SETTINGS };
