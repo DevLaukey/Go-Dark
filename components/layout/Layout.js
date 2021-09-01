@@ -8,12 +8,12 @@ import { setSettings } from '../../store/actions/settingsActions';
 
 const Layout = ({ title, children }) => {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true); 
   const [visited, setVisited] = useState(false);
 
   useEffect(() => {
     if (visited == true)
-      setLoading(True);
+      setLoading(false);
    
   }, [visited])
   const experience = useRef(null);
