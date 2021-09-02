@@ -1,0 +1,71 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Neototem';
+  flex-direction: column;
+
+  &__footer {
+    display: flex;
+    position: absolute;
+    align-items:center; 
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 60px;
+    bottom: 0;
+
+    &-line {
+      -webkit-animation-duration: 5s;
+      animation-duration: 5s;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      -webkit-animation-name: horizontalProgressBar;
+      animation-name: horizontalProgressBar;
+      -webkit-animation-timing-function: ease;
+      animation-timing-function: ease;
+      background: rgb(254, 54, 101);
+      height: 1px;
+      width: 100px;
+    }
+
+    &-percent {
+      color: rgb(254, 54, 101);
+      font-size: 10px;
+    }
+  }
+}
+
+@keyframes horizontalProgressBar {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 20px;
+  }
+  30% {
+    width: 30px;
+  }
+  40% {
+    width: 40px;
+  }
+  50% {
+    width: 50px;
+  }
+  60% {
+    width: 60px;
+  }
+  70% {
+    width: 70px;
+  }
+  80% {
+    width: 80px;
+  }
+  90% {
+    width: 90px;
+  }
+  100% {
+    width: 100px;
+  }
+}
