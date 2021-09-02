@@ -166,6 +166,30 @@ const Pricing = () => {
               alignItems: "center",
             }}
           >
+            
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={0}
+            speed={0.8}
+            onClick={() => parallax.current.scrollTo(1)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            {/* <span data-text="GO DARK" className="title">
+              GO DARK
+            </span> */}
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={0}
+            speed={1.3}
+            onClick={() => parallax.current.scrollTo(1)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <div class="pricingTable">
               
 
@@ -228,42 +252,6 @@ const Pricing = () => {
                 </li>
               </ul>
             </div>  
-          </ParallaxLayer>
-          <ParallaxLayer
-            offset={0}
-            speed={0.8}
-            onClick={() => parallax.current.scrollTo(1)}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            {/* <span data-text="GO DARK" className="title">
-              GO DARK
-            </span> */}
-          </ParallaxLayer>
-          <ParallaxLayer
-            offset={0}
-            speed={1.3}
-            onClick={() => parallax.current.scrollTo(1)}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <span className="about_section-text ">
-              At the heart of the issue is Data Privacy. And although Data
-              Privacy isn't a black and white matter or therefore a simple
-              matter, Go-Dark believes that the individual deserves the
-              opportunity to understand the information that is out there that
-              pertains to that individual. You also have a right to seek to
-              control that information for such things as personal protection,
-              removing information that seeks to harm your current opportunities
-              in life, keeping your business and employees safe from leaked
-              information, competitive disadvantages, or public embarrassment.
-              Maybe you want internet anonymity and you want to disappear.
-              Go-Dark can help.
-            </span>
           </ParallaxLayer>
           <ParallaxLayer
             offset={0}
