@@ -39,13 +39,12 @@
     }
   }
 }
-@media screen and (max-width:445px){
-  .contact_title{
+@media screen and (max-width: 445px) {
+  .contact_title {
     font-size: 5vw;
-  
   }
-  @media screen and (max-width:320px){
-    .contact_title{
+  @media screen and (max-width: 320px) {
+    .contact_title {
       font-size: 3vw;
     }
   }
@@ -145,7 +144,6 @@ body {
   }
 }
 @media screen and (min-width: 600px) {
-  
 }
 // Form
 form {
@@ -176,7 +174,7 @@ form {
 
       // Checkmark
       + span {
-        font-family:"neototem";
+        font-family: "neototem";
         opacity: 0;
         color: white;
         display: block;
@@ -270,21 +268,12 @@ form {
   }
 }
 
-@media screen and (max-width:768px){
-form {
-  @include grid(7);
-
-  .field {
-    width: 100%;
-    position: relative;
-    margin-bottom: 15px;
-
-    $hover-label-width: 18%;
-    $placeholder-bumper: 1.5%;
-    $label-padding: 18px;
-
-    // Label
-    label {
-     
-      font-size: 1.em;
-}}}}
+@media screen and (max-width: 768px) {
+  form {
+    .field {
+      label {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

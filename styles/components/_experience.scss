@@ -58,6 +58,7 @@
 
     &-title {
       color: white;
+      letter-spacing: .75vw;
       display: flex;
       justify-content: space-around;
       text-align: center;
@@ -66,6 +67,7 @@
     }
 
     &-buttons {
+     
       display: flex;
       justify-content: space-around;
     }

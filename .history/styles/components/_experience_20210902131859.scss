@@ -1,0 +1,144 @@
+.experience {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 1;
+
+  &.active {
+    display: flex;
+
+    .experience__modal {
+      width: 520px;
+      height: 300px;
+      animation: modalFadeIn 0.5s 0.8s cubic-bezier(0.165, 0.14, 0.44, 1) forwards;
+
+      &-title,
+      &-buttons {
+        opacity: 0;
+        position: relative;
+        animation: modalContentFadeIn 0.5s 1s cubic-bezier(0.165, 0.14, 0.44, 1) forwards;
+      }
+
+      &-svg {
+        rect {
+          animation: sketchInExp 0.5s 0.3s cubic-bezier(0.165, 0.14, 0.44, 1) forwards;
+        }
+      }
+    }
+
+    &.out {
+      animation: quickScaleDown 0s 0.5s linear forwards;
+
+      .experience__modal {
+        &-title,
+        &-buttons {
+          animation: modalContentFadeOut 0.5s cubic-bezier(0.165, 0.14, 0.44, 1) forwards;
+        }
+
+        &-svg {
+          rect {
+            animation: sketchOutExp 0.5s cubic-bezier(0.165, 0.14, 0.44, 1) forwards;
+          }
+        }
+      }
+    }
+  }
+
+  &__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    background: transparent;
+    border-radius: 3px;
+
+    &-title {
+      color: white;
+      letter-spacing: .75vw;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      padding: 0 15px;
+      margin: 0;
+    }
+
+    &-buttons {
+     
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+
+      rect {
+        stroke: #fe3665;
+        stroke-width: 2px;
+        stroke-dasharray: 1634;
+        stroke-dashoffset: 1634;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    height: 35px;
+    width: 150px;
+    color: white;
+    font-weight: 800;
+    outline: none;
+    border: none;
+    z-index: 2;
+
+    &-content {
+      opacity: 0;
+      position: relative;
+      animation: modalContentFadeIn 0.5s 1.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    &-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transition: 0.2s;
+      -webkit-transform: skewX(20deg);
+      -moz-transform: skewX(20deg);
+      -ms-transform: skewX(20deg);
+      transform: skewX(20deg);
+
+      rect {
+        stroke: #fe3665;
+        stroke-width: 2px;
+        stroke-dasharray: 369;
+        stroke-dashoffset: 369;
+        animation: sketchInBtn 0.5s 1s cubic-bezier(0.165, 0.14, 0.44, 1) forwards;
+      }
+    }
+
+    &:hover {
+      .experience__button-svg {
+        background: #fe3665;
+        -webkit-transform: skewX(-20deg);
+        -moz-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+      }
+    }
+  }
+}
