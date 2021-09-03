@@ -2,9 +2,9 @@ import * as types from '../types';
 
 const initialState = {
   fullExperience: null,
-  loading: false,
+  loading: true,
   error: null,
-  visited: false,
+ 
 };
 
 const settingsReducer = (state = initialState, action) => {
@@ -18,5 +18,5 @@ const settingsReducer = (state = initialState, action) => {
       return state;
   }
 };
-
+  
 export { settingsReducer as default };

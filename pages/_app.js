@@ -7,7 +7,7 @@ import "../styles/styles.scss";
 
 // fonts
 import "../fonts/styles.css";
-import { useState } from "react";
+
 
 const App = ({ Component, pageProps }) => {
   

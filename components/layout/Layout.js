@@ -2,17 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import Header from "./Header";
-import {loading, setLoading} from "../../pages/_app"
 import Loading from "./Loading";
-import { useDispatch } from "react-redux";
-import { setSettings } from "../../store/actions/settingsActions";
+import { useDispatch, getState } from "react-redux";
+import { setSettings} from "../../store/actions/settingsActions";
+import store from "../../store/store";
 
-const Layout = ({ title, children}) => {
+const Layout = ({ title, children }) => {
   const dispatch = useDispatch();
-
-   const [loading, setLoading] = useState(true);
-
-
+  const loading = store.getState().settings.loading
+console.log(loading)
   let width;
   if (window.innerWidth > 500) {
     width = 520;
@@ -31,7 +29,7 @@ const Layout = ({ title, children}) => {
       <Head>
         <title>{title} - GoDark</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head> 
+      </Head>
       {loading ? (
         <>
           <div className="experience" ref={experience}>
@@ -66,10 +64,11 @@ const Layout = ({ title, children}) => {
                     dispatch(
                       setSettings({
                         fullExperience: true,
+                        loading: false,
                       })
                     );
 
-                    setLoading(false);
+                   
                   }}
                 >
                   <svg
@@ -89,11 +88,10 @@ const Layout = ({ title, children}) => {
                     dispatch(
                       setSettings({
                         fullExperience: false,
+                        loading: false,
                       })
                     );
 
-                    setLoading(false);
-                    console.log(loading);
                   }}
                 >
                   <svg
@@ -120,12 +118,11 @@ const Layout = ({ title, children}) => {
       )}
     </div>
   );
-};;
+};
 
 Layout.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
 };
-
 
 export default Layout;
