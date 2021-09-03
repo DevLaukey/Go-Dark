@@ -1,0 +1,14 @@
+
+@font-face {
+  font-family: 'Neototem';
+  src: url('Neototem.eot?#iefix') format('embedded-opentype'),  url('Neototem.woff') format('woff'), url('Neototem.ttf')  format('truetype'), url('Neototem.svg#Neototem') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alpharush';
+  src: url('Alpharush.ttf') format('embedded-opentype'),  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
