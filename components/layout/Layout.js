@@ -4,13 +4,13 @@ import Head from "next/head";
 import Header from "./Header";
 import Loading from "./Loading";
 import { useDispatch, getState } from "react-redux";
-import { setSettings} from "../../store/actions/settingsActions";
+import { setSettings } from "../../store/actions/settingsActions";
 import store from "../../store/store";
 
 const Layout = ({ title, children }) => {
   const dispatch = useDispatch();
-  const loading = store.getState().settings.loading
-console.log(loading)
+  const loading = store.getState().settings.loading;
+  console.log(loading);
   let width;
   if (window.innerWidth > 500) {
     width = 520;
@@ -28,6 +28,8 @@ console.log(loading)
     <div className="layout">
       <Head>
         <title>{title} - GoDark</title>
+
+        
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {loading ? (
@@ -67,8 +69,6 @@ console.log(loading)
                         loading: false,
                       })
                     );
-
-                   
                   }}
                 >
                   <svg
@@ -91,7 +91,6 @@ console.log(loading)
                         loading: false,
                       })
                     );
-
                   }}
                 >
                   <svg
