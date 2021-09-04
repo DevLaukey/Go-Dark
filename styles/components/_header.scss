@@ -48,56 +48,36 @@
     }
   }
 }
-nav{
-  background-color: transparent;
-}
-
-.nav_header {
-  z-index: 999;
-  background-color: transparent;
-  padding: 10px;
-}
-@media screen and (max-width: 375px) {
-  .header {
-    &__links {
-      a {
-        font-size: 0.75rem;
-        font-weight: 400;
-      }
-    }
-  }
-}
-/* Extra */
-$primary: #fff;
+$primary: rgba(255, 255, 255, 0);
 $secondary: #ccc;
 $ternary: #272727;
 $dark: #444444;
-
-body {
-  color: $ternary;
-  font-size: 14px;
-  margin: 0;
-
-}
 
 .logo {
   max-width: 200px;
 }
 .navbar {
   align-items: center;
-  background: transparent ;
-  justify-content: space-between;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-
+  background: transparent;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
   display: flex;
+  position: sticky;
   flex-direction: row;
+  padding:  10px;
+  
 }
-
+@media screen and (max-width: 768px) {
+  .navbar{
+    padding-top:70px ;
+  }
+}
 .push-left {
   margin-left: auto;
-  display: flex;
 }
-
+// .nav_header {
+//   position: fixed;
+//   display: flex;
+// }
 /* Menu */
 .hamburger {
   background: transparent;
@@ -114,7 +94,7 @@ body {
   }
   
   &-line {
-    background: white;
+    background: $ternary;
     height: 3px;
     position: absolute;
     left: 0;
@@ -122,7 +102,7 @@ body {
     width: 100%;
     
     .hamburger:hover & {
-      background: rgb(255, 255, 255);
+      background: #777;
     }
     
     &-top {
@@ -130,6 +110,7 @@ body {
     }
     
     .menu-active &-top {
+      top: 50%;
       transform: rotate(45deg) translatey(-50%);
     }
     
@@ -163,7 +144,7 @@ body {
   transition: all .25s ease-in; 
   
   @media screen and (max-width: 768px) {
-    background: transparent;
+    background: $primary;
     flex-direction: column;
     justify-content: center;
     opacity: 0;
@@ -175,7 +156,6 @@ body {
     .menu-active & {
       transform: translatey(0%);  
       opacity: 1;
-      top: 100px;
     }
   }
   
@@ -205,7 +185,7 @@ body {
     border: 1px solid #ccc;
     display: none;
     position: absolute;
-    background-color: transparent;
+    background-color: $primary;
     padding: 5px 5px;
     list-style: none; 
     width: 230px;   
@@ -213,7 +193,7 @@ body {
       position: relative;
       width: 100%;
       display: none;
-      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0.20);
       box-sizing: border-box;
     }
 }
