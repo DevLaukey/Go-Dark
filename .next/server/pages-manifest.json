@@ -3,8 +3,9 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/about": "pages/about.js",
-  "/blog": "pages/blog.js",
-  "/contact": "pages/contact.js",
+  "/pricing": "pages/pricing.js",
   "/": "pages/index.js",
+  "/contact": "pages/contact.js",
+  "/blog": "pages/blog.js",
   "/id": "pages/id.js"
 }

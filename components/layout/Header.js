@@ -1,16 +1,16 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Header = () => {
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
 
- function toggleBodyClass(className) {
-   document.body.classList.toggle(className);
- }
-  
+  function toggleBodyClass(className) {
+    document.body.classList.toggle(className);
+  }
+
   return (
     <div className="nav_header">
       <nav class="navbar">
@@ -19,7 +19,7 @@ const Header = () => {
             <Link href="/">
               <a>
                 <Image
-                  className="loading__skull"
+                  className="header_loading__skull"
                   src="/skull.gif"
                   alt="GoDark Icon"
                   width={64}
@@ -32,7 +32,7 @@ const Header = () => {
             <Link href="/">
               <a>
                 <Image
-                  className="loading__skull"
+                  className="header_loading__skull"
                   src="/skull.png"
                   alt="GoDark Icon"
                   width={64}
@@ -56,25 +56,54 @@ const Header = () => {
             <span class="hamburger-line hamburger-line-middle"></span>
             <span class="hamburger-line hamburger-line-bottom"></span>
           </button>
-          <div className="header_links">
+          <div className="header__links-menu">
             <ul id="primary-menu" class="menu nav-menu">
               <li class="menu-item current-menu-item">
-                <Link href="/">
+                <Link
+                  href="/"
+                  onClick={() => {
+                    toggleBodyClass("menu-active");
+                  }}
+                >
                   <a
                     className={router.route === "/" ? "active" : ""}
                     data-text="Home"
+                    onClick={() => {
+                      toggleBodyClass("menu-active");
+                    }}
                   >
                     Home
                   </a>
                 </Link>
               </li>
               <li class="menu-item dropdown">
-                <Link href="/about">
+                <Link
+                  href="/about"
+                  onClick={() => {
+                    toggleBodyClass("menu-active");
+                  }}
+                >
                   <a
                     className={router.route === "/about" ? "active" : ""}
                     data-text="About"
+                    onClick={() => {
+                      toggleBodyClass("menu-active");
+                    }}
                   >
                     About
+                  </a>
+                </Link>
+              </li>
+              <li class="menu-item dropdown">
+                <Link href="/pricing">
+                  <a
+                    className={router.route === "/about" ? "active" : ""}
+                    data-text="Pricing"
+                    onClick={() => {
+                      toggleBodyClass("menu-active");
+                    }}
+                  >
+                    Pricing
                   </a>
                 </Link>
               </li>
@@ -83,6 +112,9 @@ const Header = () => {
                   <a
                     className={router.route === "/blog" ? "active" : ""}
                     data-text="Blog"
+                    onClick={() => {
+                      toggleBodyClass("menu-active");
+                    }}
                   >
                     Blog
                   </a>
@@ -93,6 +125,9 @@ const Header = () => {
                   <a
                     className={router.route === "/contact" ? "active" : ""}
                     data-text="Contact"
+                    onClick={() => {
+                      toggleBodyClass("menu-active");
+                    }}
                   >
                     Contact
                   </a>
@@ -107,5 +142,3 @@ const Header = () => {
 };
 
 export default Header;
-
-

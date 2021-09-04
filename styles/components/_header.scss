@@ -1,9 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 .header {
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 20px;
   font-family: Neototem;
   top: 0;
   left: 0;
@@ -48,7 +52,7 @@
     }
   }
 }
-$primary: rgba(255, 255, 255, 0);
+$primary: transparent;
 $secondary: #ccc;
 $ternary: #272727;
 $dark: #444444;
@@ -57,19 +61,29 @@ $dark: #444444;
   max-width: 200px;
 }
 .navbar {
-  align-items: center;
-  background: transparent;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
+  background-color: transparent;
   display: flex;
   position: sticky;
   flex-direction: row;
-  padding:  10px;
+  padding:  20px;
+  align-items: center;
   
 }
 @media screen and (max-width: 768px) {
   .navbar{
-    padding-top:70px ;
+    align-items: flex-start;
+    position: sticky;
   }
+  .header__links-menu {
+  padding-top:  160px;
+  background-color: transparent;
+}
+.hamburger {
+  margin: 20px;
+}
+
+
+
 }
 .push-left {
   margin-left: auto;
@@ -94,11 +108,13 @@ $dark: #444444;
   }
   
   &-line {
-    background: $ternary;
+    background: white;
     height: 3px;
+    color: white;
     position: absolute;
     left: 0;
     transition: all .2s ease-out; 
+    margin-right: 20px;
     width: 100%;
     
     .hamburger:hover & {
@@ -144,7 +160,7 @@ $dark: #444444;
   transition: all .25s ease-in; 
   
   @media screen and (max-width: 768px) {
-    background: $primary;
+    background: transparent;
     flex-direction: column;
     justify-content: center;
     opacity: 0;
@@ -181,22 +197,22 @@ $dark: #444444;
   
 }
 
-.sub-nav {
-    border: 1px solid #ccc;
-    display: none;
-    position: absolute;
-    background-color: $primary;
-    padding: 5px 5px;
-    list-style: none; 
-    width: 230px;   
-    @media screen and (max-width: 768px) {
-      position: relative;
-      width: 100%;
-      display: none;
-      background-color: rgba(0, 0, 0, 0.20);
-      box-sizing: border-box;
-    }
-}
+// .sub-nav {
+//     border: 1px solid #ccc;
+//     display: none;
+//     position: absolute;
+//     background-color: $primary;
+//     padding: 5px 5px;
+//     list-style: none; 
+//     width: 230px;   
+//     @media screen and (max-width: 768px) {
+//       position: relative;
+//       width: 100%;
+//       display: none;
+//       background-color: rgba(0, 0, 0, 0.20);
+//       box-sizing: border-box;
+//     }
+// }
 
  .nav__link {
    &:hover + .sub-nav {
@@ -205,8 +221,4 @@ $dark: #444444;
  }
 }
 
-.sub-nav {
-  &:hover {
-    display:block;
-  }
-}
+

@@ -38,7 +38,7 @@ const About = () => {
         className="home"
         style={{ width: "100%", height: "100%", background: "#020205" }}
       >
-        <Parallax ref={parallax} pages={3}>
+        <Parallax ref={parallax} pages={4}>
           <ParallaxLayer
             offset={1}
             speed={1}
@@ -60,6 +60,17 @@ const About = () => {
           />
           <ParallaxLayer
             offset={1.3}
+            speed={-0.3}
+            style={{ pointerEvents: "none", display: "none" }}
+          >
+            <img
+              src={url("satellite4")}
+              style={{ width: "15%", marginLeft: "70%" }}
+              alt=""
+            />
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={3.5}
             speed={-0.3}
             style={{ pointerEvents: "none", display: "none" }}
           >
@@ -134,9 +145,21 @@ const About = () => {
               alt=""
             />
           </ParallaxLayer>
+          <ParallaxLayer offset={3.6} speed={0.4} style={{ opacity: 0.6 }}>
+            <img
+              src={url("cloud")}
+              style={{ display: "block", width: "20%", marginLeft: "5%" }}
+              alt=""
+            />
+            <img
+              src={url("cloud")}
+              style={{ display: "block", width: "15%", marginLeft: "75%" }}
+              alt=""
+            />
+          </ParallaxLayer>
 
           <ParallaxLayer
-            offset={2.5}
+            offset={4}
             speed={-0.4}
             style={{
               display: "flex",
@@ -173,7 +196,7 @@ const About = () => {
               display: "none",
             }}
           />
-          
+
           <ParallaxLayer
             offset={0}
             speed={1.2}
@@ -243,7 +266,7 @@ const About = () => {
             }}
           >
             <div className="about_container">
-              <div className="about_text1 draw ">
+              <div className="about_text1 draw thick">
                 We recognize that Open Source Intelligence (OSINT) is both a
                 science and an art, which requires discretion and good judgment.
                 Like any complex practice, finding information depends upon the
@@ -254,7 +277,28 @@ const About = () => {
                 perspective, taking into consideration your objectives and
                 unique constraints
               </div>
-              <div className="about_text2 draw thick">
+              <div className="about_img">
+                <img src="https://bit.ly/3h5jeCR" alt="" />
+              </div>
+            </div>
+            <br />
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={2}
+            speed={0.1}
+            onClick={() => parallax.current.scrollTo(3)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div className="about_container">
+              <div className="about_img">
+                
+                  <img src="https://bit.ly/3h5jeCR" alt="" />
+              </div>
+              <div className="about_text1 draw  ">
                 At the heart of the issue is Data Privacy. And although Data
                 Privacy isn't a black and white matter or therefore a simple
                 matter, Go-Dark believes that the individual deserves the
@@ -271,6 +315,18 @@ const About = () => {
           </ParallaxLayer>
           <ParallaxLayer
             offset={2}
+            speed={-0}
+            style={{
+              display: "none",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            onClick={() => parallax.current.scrollTo(0)}
+          >
+            <img src={url("clients-main")} style={{ width: "40%" }} alt="" />
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={3.7}
             speed={-0}
             style={{
               display: "none",

@@ -10,7 +10,7 @@ import store from "../../store/store";
 const Layout = ({ title, children }) => {
   const dispatch = useDispatch();
   const loading = store.getState().settings.loading;
-  console.log(loading);
+  
   let width;
   if (window.innerWidth > 500) {
     width = 520;

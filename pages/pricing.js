@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 import { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import "plyr-react/dist/plyr.css";
-import Loading from "../components/layout/Loading";
+
 import Link from "next/link";
 
 const url = (name, wrap = false) =>
@@ -205,9 +205,9 @@ const Pricing = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={0}
+            offset={1}
             speed={1.3}
-            onClick={() => parallax.current.scrollTo(1)}
+            onClick={() => parallax.current.scrollTo(2)}
             style={{
               display: "flex",
               alignItems: "center",
@@ -229,7 +229,7 @@ const Pricing = () => {
             />
           </ParallaxLayer>
           <ParallaxLayer
-            offset={1}
+            offset={0}
             speed={0.1}
             onClick={() => parallax.current.scrollTo(1)}
             style={{

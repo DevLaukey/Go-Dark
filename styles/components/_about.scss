@@ -141,17 +141,18 @@
   display: flex;
   font-size: 1.5em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .about_container {
     align-items: center;
     display: block;
+    margin: 20px;
   }
 }
 .about_img {
   height: auto;
   text-align: center;
   width: auto;
-  padding-right: 9em;
+  margin: 10px;
 }
 .about_text {
   position: relative;
@@ -181,7 +182,6 @@
 .about_text1{
   font-family: 'Alpharush';
   padding: 20px;
-  border-right: 1px solid #eee;
 }
 .about_text2{
   font-family: 'Alpharush';

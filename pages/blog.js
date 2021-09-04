@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import "plyr-react/dist/plyr.css";
 import Link from "next/link";
 
-
 const url = (name, wrap = false) =>
   `${
     wrap ? "url(" : ""
@@ -40,7 +39,7 @@ const Blog = () => {
         className="home"
         style={{ width: "100%", height: "100%", background: "#020205" }}
       >
-        <Parallax ref={parallax} pages={3}>
+        <Parallax ref={parallax} pages={4}>
           <ParallaxLayer
             offset={1}
             speed={1}
@@ -83,6 +82,18 @@ const Blog = () => {
               alt=""
             />
           </ParallaxLayer>
+          <ParallaxLayer offset={3} speed={0.8} style={{ opacity: 0.1 }}>
+            <img
+              src={url("cloud")}
+              style={{ display: "block", width: "20%", marginLeft: "55%" }}
+              alt=""
+            />
+            <img
+              src={url("cloud")}
+              style={{ display: "block", width: "10%", marginLeft: "15%" }}
+              alt=""
+            />
+          </ParallaxLayer>
           <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
             <img
               src={url("cloud")}
@@ -107,7 +118,7 @@ const Blog = () => {
               alt=""
             />
           </ParallaxLayer>
-          <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
+          <ParallaxLayer offset={0.6} speed={-0.1} style={{ opacity: 0.4 }}>
             <img
               src={url("cloud")}
               style={{ display: "block", width: "20%", marginLeft: "60%" }}
@@ -164,7 +175,7 @@ const Blog = () => {
             }}
           />
           <ParallaxLayer
-            offset={0}
+            offset={1}
             speed={1.2}
             onClick={() => parallax.current.scrollTo(2)}
             style={{
@@ -173,7 +184,7 @@ const Blog = () => {
             }}
           ></ParallaxLayer>
           <ParallaxLayer
-            offset={0}
+            offset={1}
             speed={0.8}
             onClick={() => parallax.current.scrollTo(1)}
             style={{
@@ -187,7 +198,7 @@ const Blog = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={0}
+            offset={1}
             speed={1.2}
             onClick={() => parallax.current.scrollTo(1)}
             style={{
@@ -204,9 +215,9 @@ const Blog = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={0}
+            offset={2}
             speed={1.3}
-            onClick={() => parallax.current.scrollTo(1)}
+            onClick={() => parallax.current.scrollTo(4)}
             style={{
               display: "flex",
               alignItems: "center",
@@ -228,17 +239,16 @@ const Blog = () => {
             />
           </ParallaxLayer>
           <ParallaxLayer
-            offset={1}
+            offset={0}
             speed={0.1}
-            onClick={() => parallax.current.scrollTo(1)}
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <div className="">
-              <div id="blog_container">
+            <div id="blog_container">
+              <div class="container">
                 <a class="blog_card-link" href="/id">
                   <article class="blog_blog-card">
                     <img
@@ -279,6 +289,8 @@ const Blog = () => {
                     </div>
                   </article>
                 </a>
+              </div>
+              <div class="container">
                 <a class="blog_card-link" href="/id">
                   <article class="blog_blog-card">
                     <img
@@ -333,7 +345,7 @@ const Blog = () => {
             }}
           />
           <ParallaxLayer
-            offset={0}
+            offset={1}
             speed={1.2}
             onClick={() => parallax.current.scrollTo(1)}
             style={{
@@ -341,8 +353,9 @@ const Blog = () => {
               alignItems: "center",
             }}
           ></ParallaxLayer>
+
           <ParallaxLayer
-            offset={0}
+            offset={1}
             speed={0.8}
             onClick={() => parallax.current.scrollTo(1)}
             style={{
