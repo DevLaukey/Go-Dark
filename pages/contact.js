@@ -44,11 +44,7 @@ const Contact = () => {
             speed={1}
             style={{ backgroundColor: "#020205" }}
           />
-          <ParallaxLayer
-            offset={2}
-            speed={1}
-            style={{ backgroundColor: "#020205" }}
-          />
+         
           <ParallaxLayer
             offset={0}
             speed={0}
@@ -69,7 +65,7 @@ const Contact = () => {
               alt=""
             />
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
+          <ParallaxLayer offset={2} speed={0.8} style={{ opacity: 0.1 }}>
             <img
               src={url("cloud")}
               style={{ display: "block", width: "20%", marginLeft: "55%" }}
@@ -231,7 +227,7 @@ const Contact = () => {
           ></ParallaxLayer>
 
           <ParallaxLayer
-            offset={1}
+            offset={1 }
             speed={0.1}
             style={{
               display: "flex",
