@@ -12,8 +12,7 @@ const Header = () => {
   }
 
   return (
-    <div className="nav_header">
-      <nav class="navbar">
+      <nav class="header ">
         <div className="logo">
           {isHovered ? (
             <Link href="/">
@@ -137,7 +136,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </div>
+    
   );
 };
 

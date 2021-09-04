@@ -1,14 +1,9 @@
-*{
-  padding: 0;
-  margin: 0;
-}
-
 .header {
-  position: sticky;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Neototem;
+  padding-right: 20px;
   top: 0;
   left: 0;
   right: 0;
@@ -70,14 +65,10 @@ $dark: #444444;
   
 }
 @media screen and (max-width: 768px) {
-  .navbar{
-    align-items: flex-start;
-    position: sticky;
+ #primary-menu{
+padding-top :120px;    
   }
-  .header__links-menu {
-  padding-top:  160px;
-  background-color: transparent;
-}
+ 
 .hamburger {
   margin: 20px;
 }
@@ -88,10 +79,11 @@ $dark: #444444;
 .push-left {
   margin-left: auto;
 }
-// .nav_header {
-//   position: fixed;
-//   display: flex;
-// }
+.nav_header {
+ z-index: 1000;
+ position: sticky;
+ background-color: transparent;
+}
 /* Menu */
 .hamburger {
   background: transparent;
