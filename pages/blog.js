@@ -35,7 +35,7 @@ const Blog = () => {
   }, [plyr, fullExperience]);
 
   return (
-    <Layout title="Blog">
+    <Layout title="Id">
       <div
         className="home"
         style={{ width: "100%", height: "100%", background: "#020205" }}
@@ -239,7 +239,7 @@ const Blog = () => {
           >
             <div className="">
               <div id="blog_container">
-                <a class="blog_card-link" href="#">
+                <a class="blog_card-link" href="/blogs/id">
                   <article class="blog_blog-card">
                     <img
                       class="blog_post-image"
@@ -259,7 +259,47 @@ const Blog = () => {
                     </div>
                   </article>
                 </a>
-                <a class="blog_card-link" href="#">
+                <a class="blog_card-link" href="/blogs/id">
+                  <article class="blog_blog-card">
+                    <img
+                      class="blog_post-image"
+                      src="https://etimg.etb2bimg.com/photo/71884644.cms"
+                    />
+                    <div class="blog_article-details">
+                      <h4 class="blog_post-category">Category</h4>
+                      <h3 class="blog_post-title">Blog title</h3>
+                      <p class="blog_post-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquam deserunt incidunt veritatis cupiditate, iusto
+                        sit voluptatum veniam laborum molestiae nihil sapiente
+                        error, fugit, minima cumque modi! Ea aliquam commodi
+                        provident.
+                      </p>
+                      <p class="blog_post-author">By Name</p>
+                    </div>
+                  </article>
+                </a>
+                <a class="blog_card-link" href="/blogs/id">
+                  <article class="blog_blog-card">
+                    <img
+                      class="blog_post-image"
+                      src="https://etimg.etb2bimg.com/photo/71884644.cms"
+                    />
+                    <div class="blog_article-details">
+                      <h4 class="blog_post-category">Category</h4>
+                      <h3 class="blog_post-title">Blog title</h3>
+                      <p class="blog_post-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquam deserunt incidunt veritatis cupiditate, iusto
+                        sit voluptatum veniam laborum molestiae nihil sapiente
+                        error, fugit, minima cumque modi! Ea aliquam commodi
+                        provident.
+                      </p>
+                      <p class="blog_post-author">By Name</p>
+                    </div>
+                  </article>
+                </a>
+                <a class="blog_card-link" href="/blogs/id">
                   <article class="blog_blog-card">
                     <img
                       class="blog_post-image"
