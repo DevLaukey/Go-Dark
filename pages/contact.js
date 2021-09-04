@@ -160,7 +160,7 @@ const Contact = () => {
                 onMouseLeave={onMouseLeave}
                 alt=""
               />
-            </Link> 
+            </Link>
           </ParallaxLayer>
           <ParallaxLayer
             offset={2}
@@ -241,25 +241,40 @@ const Contact = () => {
           >
             <section id="hire">
               <form>
-                <div class="field name-box">
-                  <input type="text" id="name" placeholder="Who Are You?" />
-                  <label for="name">Name</label>
-                  <span class="ss-icon">check</span>
-                </div>
+                <div className="contact_top">
+                  <div class="field name-box">
+                    <input type="text" id="name" placeholder="Who Are You?" />
+                    <label for="name">Name</label>
+                    <span class="ss-icon">check</span>
+                  </div>
 
-                <div class="field email-box">
-                  <input type="text" id="email" placeholder="name@email.com" />
-                  <label for="email">Email</label>
-                  <span class="ss-icon">check</span>
+                  <div class="field email-box">
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="name@email.com"
+                    />
+                    <label for="email">Email</label>
+                    <span class="ss-icon">check</span>
+                  </div>
                 </div>
-
                 <div class="field msg-box">
                   <textarea
                     id="msg"
                     rows="5"
-                    placeholder="Your message goes here..."
+                    placeholder="Your subject goes here..."
                   />
-                  <label for="msg">Message</label>
+                  <label for="msg">Subject</label>
+                  <span class="ss-icon">check</span>
+                </div>
+                <br />
+                <div class="field msg-box">
+                  <textarea
+                    id="msg"
+                    rows="5"
+                    placeholder="Your Message goes here..."
+                  />
+                  <label for="msg">Messsage</label>
                   <span class="ss-icon">check</span>
                 </div>
                 <br />

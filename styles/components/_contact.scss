@@ -39,6 +39,12 @@
     }
   }
 }
+.contact_top{
+  display: flex;
+}
+.name-box{
+  margin-right: 10px;
+}
 @media screen and (max-width: 445px) {
   .contact_title {
     font-size: 5vw;
