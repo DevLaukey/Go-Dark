@@ -239,7 +239,7 @@ const Blog = () => {
           >
             <div className="">
               <div id="blog_container">
-                <a class="blog_card-link" href="/blogs/id">
+                <a class="blog_card-link" href="/id">
                   <article class="blog_blog-card">
                     <img
                       class="blog_post-image"
@@ -259,7 +259,7 @@ const Blog = () => {
                     </div>
                   </article>
                 </a>
-                <a class="blog_card-link" href="/blogs/id">
+                <a class="blog_card-link" href="/id">
                   <article class="blog_blog-card">
                     <img
                       class="blog_post-image"
@@ -279,7 +279,7 @@ const Blog = () => {
                     </div>
                   </article>
                 </a>
-                <a class="blog_card-link" href="/blogs/id">
+                <a class="blog_card-link" href="/id">
                   <article class="blog_blog-card">
                     <img
                       class="blog_post-image"
@@ -299,7 +299,7 @@ const Blog = () => {
                     </div>
                   </article>
                 </a>
-                <a class="blog_card-link" href="/blogs/id">
+                <a class="blog_card-link" href="/id">
                   <article class="blog_blog-card">
                     <img
                       class="blog_post-image"

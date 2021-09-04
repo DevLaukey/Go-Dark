@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import "plyr-react/dist/plyr.css";
 import Link from "next/link";
 import Head from "next/head"; 
+import Header from '../components/layout/Header';
 
 const url = (name, wrap = false) =>
   `${
@@ -75,17 +76,7 @@ const Id = () => {
     </div>
   </div>
 </nav> */}
-      <Link href="/">
-        <a>
-          <Image
-            className="loading__skull"
-            src="/skull.gif"
-            alt="GoDark Icon"
-            width={64}
-            height={64}
-          />
-        </a>
-      </Link>
+      <Header/>
       <Parallax
         ref={parallax}
         pages={3}
@@ -285,10 +276,10 @@ const Id = () => {
                                       <i class="fa fa-tags"></i>
                                     </li>
                                     <li>
-                                      <a href="#">Best Templates</a>,
+                                      <a href="#">Best </a>,
                                     </li>
                                     <li>
-                                      <a href="#">TemplateMo</a>
+                                      <a href="#">Tasam</a>
                                     </li>
                                   </ul>
                                 </div>
